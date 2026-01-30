@@ -1,90 +1,170 @@
 {
-  "🎨 Color Scheme 1 – Classic & Clean": {
-    "Text": {
+  "Color": {
+    "White": {
       "$type": "color",
-      "$value": "{Brand.Onyx}"
+      "$value": "#ffffff"
     },
-    "Foreground": {
+    "Neutral Lightest": {
       "$type": "color",
-      "$value": "{Brand.Subtle Slate}"
+      "$value": "#eeeeee"
     },
-    "Background": {
+    "Neutral Lighter": {
       "$type": "color",
-      "$value": "{Color.White}"
+      "$value": "#cccccc"
     },
-    "Border": {
+    "Neutral Light": {
       "$type": "color",
-      "$value": "{Brand.Subtle Slate}"
+      "$value": "#aaaaaa"
     },
-    "Accent": {
+    "Neutral": {
       "$type": "color",
-      "$value": "{Brand.Gold}"
+      "$value": "#666666"
+    },
+    "Neutral Dark": {
+      "$type": "color",
+      "$value": "#444444"
+    },
+    "Neutral Darker": {
+      "$type": "color",
+      "$value": "#222222"
+    },
+    "Neutral Darkest": {
+      "$type": "color",
+      "$value": "#000000"
     }
   },
-  "🎨 Color Scheme 2 – Bold & Luxe": {
-    "Text": {
+  "Opacity": {
+    "Transparent": {
       "$type": "color",
-      "$value": "{Color.White}"
+      "$value": "rgba(255, 255, 255, 0.0000)"
     },
-    "Foreground": {
+    "White 5": {
       "$type": "color",
-      "$value": "{Color.Neutral Dark}"
+      "$value": "rgba(255, 255, 255, 0.0500)"
     },
-    "Background": {
+    "White 10": {
       "$type": "color",
-      "$value": "{Color.Neutral Darkest}"
+      "$value": "rgba(255, 255, 255, 0.1000)"
     },
-    "Border": {
+    "White 15": {
       "$type": "color",
-      "$value": "{Brand.Gold}"
+      "$value": "rgba(255, 255, 255, 0.1500)"
     },
-    "Accent": {
+    "White 20": {
       "$type": "color",
-      "$value": "{Brand.Gold}"
+      "$value": "rgba(255, 255, 255, 0.2000)"
+    },
+    "White 30": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.3000)"
+    },
+    "White 40": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.4000)"
+    },
+    "White 50": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.5000)"
+    },
+    "White 60": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.6000)"
+    },
+    "Neutral Darkest 5": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.0500)"
+    },
+    "Neutral Darkest 10": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.1000)"
+    },
+    "Neutral Darkest 15": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.1500)"
+    },
+    "Neutral Darkest 20": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.2000)"
+    },
+    "Neutral Darkest 30": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.3000)"
+    },
+    "Neutral Darkest 40": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.4000)"
+    },
+    "Neutral Darkest 50": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.5000)"
+    },
+    "Neutral Darkest 60": {
+      "$type": "color",
+      "$value": "rgba(0, 0, 0, 0.6000)"
+    },
+    "Gold 5": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.0500)"
+    },
+    "Gold 10": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.1000)"
+    },
+    "Gold 15": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.1500)"
+    },
+    "Gold 20": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.2000)"
+    },
+    "Gold 30": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.3000)"
+    },
+    "Gold 40": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.4000)"
+    },
+    "Gold 45": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.4500)"
+    },
+    "Gold 50": {
+      "$type": "color",
+      "$value": "rgba(249, 182, 44, 0.5000)"
+    },
+    "Gold 60": {
+      "$type": "color",
+      "$value": "#f9b62c"
     }
   },
-  "☁️ Color Scheme 3 – Soft & Neutral": {
-    "Text": {
+  "Brand": {
+    "Ghost": {
       "$type": "color",
-      "$value": "{Color.Neutral Dark}"
+      "$value": "#ffffff"
     },
-    "Foreground": {
+    "Subtle Slate": {
       "$type": "color",
-      "$value": "{Color.White}"
+      "$value": "#f3f3f3"
     },
-    "Background": {
+    "Onyx": {
       "$type": "color",
-      "$value": "{Color.Neutral Lightest}"
+      "$value": "#000000"
     },
-    "Border": {
+    "Gold": {
       "$type": "color",
-      "$value": "{Brand.Subtle Slate}"
-    },
-    "Accent": {
-      "$type": "color",
-      "$value": "{Brand.Gold}"
+      "$value": "#f9b62c"
     }
   },
-  "🚀 Color Scheme 4 – Modern & Focused": {
-    "Text": {
+  "Attributes": {
+    "Subtle Slate": {
       "$type": "color",
-      "$value": "{Color.Neutral Darkest}"
-    },
-    "Foreground": {
-      "$type": "color",
-      "$value": "{Color.White}"
-    },
-    "Background": {
-      "$type": "color",
-      "$value": "{Brand.Subtle Slate}"
-    },
-    "Border": {
-      "$type": "color",
-      "$value": "{Opacity.Neutral Darkest 30}"
-    },
-    "Accent": {
-      "$type": "color",
-      "$value": "{Brand.Gold}"
+      "$value": "#f3f3f3"
     }
+  },
+  "Hero Top Padding": {
+    "$type": "number",
+    "$value": 400
   }
 }
