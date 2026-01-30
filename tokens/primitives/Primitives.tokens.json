@@ -1,0 +1,90 @@
+{
+  "🎨 Color Scheme 1 – Classic & Clean": {
+    "Text": {
+      "$type": "color",
+      "$value": "{Brand.Onyx}"
+    },
+    "Foreground": {
+      "$type": "color",
+      "$value": "{Brand.Subtle Slate}"
+    },
+    "Background": {
+      "$type": "color",
+      "$value": "{Color.White}"
+    },
+    "Border": {
+      "$type": "color",
+      "$value": "{Brand.Subtle Slate}"
+    },
+    "Accent": {
+      "$type": "color",
+      "$value": "{Brand.Gold}"
+    }
+  },
+  "🎨 Color Scheme 2 – Bold & Luxe": {
+    "Text": {
+      "$type": "color",
+      "$value": "{Color.White}"
+    },
+    "Foreground": {
+      "$type": "color",
+      "$value": "{Color.Neutral Dark}"
+    },
+    "Background": {
+      "$type": "color",
+      "$value": "{Color.Neutral Darkest}"
+    },
+    "Border": {
+      "$type": "color",
+      "$value": "{Brand.Gold}"
+    },
+    "Accent": {
+      "$type": "color",
+      "$value": "{Brand.Gold}"
+    }
+  },
+  "☁️ Color Scheme 3 – Soft & Neutral": {
+    "Text": {
+      "$type": "color",
+      "$value": "{Color.Neutral Dark}"
+    },
+    "Foreground": {
+      "$type": "color",
+      "$value": "{Color.White}"
+    },
+    "Background": {
+      "$type": "color",
+      "$value": "{Color.Neutral Lightest}"
+    },
+    "Border": {
+      "$type": "color",
+      "$value": "{Brand.Subtle Slate}"
+    },
+    "Accent": {
+      "$type": "color",
+      "$value": "{Brand.Gold}"
+    }
+  },
+  "🚀 Color Scheme 4 – Modern & Focused": {
+    "Text": {
+      "$type": "color",
+      "$value": "{Color.Neutral Darkest}"
+    },
+    "Foreground": {
+      "$type": "color",
+      "$value": "{Color.White}"
+    },
+    "Background": {
+      "$type": "color",
+      "$value": "{Brand.Subtle Slate}"
+    },
+    "Border": {
+      "$type": "color",
+      "$value": "{Opacity.Neutral Darkest 30}"
+    },
+    "Accent": {
+      "$type": "color",
+      "$value": "{Brand.Gold}"
+    }
+  }
+}
