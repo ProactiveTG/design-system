@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import Ajv from 'ajv';
+import Ajv2020 from 'ajv/dist/2020.js';
 
 const ROOT = path.resolve('new_tokens');
-const ajv = new Ajv({ allErrors: true, allowUnionTypes: true });
+const ajv = new Ajv2020({ allErrors: true, allowUnionTypes: true });
 const schema = JSON.parse(fs.readFileSync('schemas/token.schema.json', 'utf8'));
 const validate = ajv.compile(schema);
 

@@ -29,9 +29,9 @@ fs.writeFileSync(path.join(OUT, 'json', 'tokens.source-map.json'), JSON.stringif
 // Style Dictionary config
 const sd = new StyleDictionary({
   source: [
-    'new_tokens/primitives/**/*.json',
-    'new_tokens/semantic/**/*.json',
-    'new_tokens/themes/**/*.json'
+    'primitives/**/*.json',
+    'semantic/**/*.json',
+    'themes/**/*.json'
   ],
   platforms: {
     css: {
@@ -57,7 +57,7 @@ const sd = new StyleDictionary({
   }
 });
 
-sd.buildAllPlatforms();
+await sd.buildAllPlatforms();
 
 // Generate minimal TypeScript typings (flat token names)
 const flatPath = path.resolve('dist/json/tokens.flat.json');
