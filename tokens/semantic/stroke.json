@@ -1,0 +1,6 @@
+{
+  "stroke": {
+    "border": { "value": "{stroke.border-width}" },
+    "divider": { "value": "{stroke.divider-width}" }
+  }
+}

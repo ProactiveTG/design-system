@@ -1,0 +1,16 @@
+{
+  "card": {
+    "background": {
+      "primary": { "value": "{color.background.primary}" }
+    },
+    "border": {
+      "default": { "value": "{color.border.default}" }
+    },
+    "padding": {
+      "md": { "value": "{space.7}" }
+    },
+    "radius": {
+      "default": { "value": "{radius.card}" }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "input": {
+    "background": {
+      "default": { "value": "{color.background.primary}" }
+    },
+    "border": {
+      "default": { "value": "{color.border.default}" }
+    },
+    "text": {
+      "primary": { "value": "{color.text.primary}" }
+    },
+    "padding": {
+      "md": { "value": "{space.2}" }
+    },
+    "radius": {
+      "default": { "value": "{radius.input}" }
+    }
+  }
+}

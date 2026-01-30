@@ -1,0 +1,16 @@
+{
+  "space": {
+    "section": {
+      "sm": { "value": "{space.7}" },
+      "md": { "value": "{space.9}" },
+      "lg": { "value": "{space.10}" }
+    },
+    "button": {
+      "sm": { "value": "{space.2}" },
+      "md": { "value": "{space.3}" }
+    },
+    "page": {
+      "padding": { "value": "{space.8}" }
+    }
+  }
+}
