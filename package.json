@@ -1,0 +1,27 @@
+{
+  "name": "@proactive/design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ProActive Design System - design tokens and brand assets",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "validate": "node scripts/validate-tokens.mjs",
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "build": "npm run clean && npm run validate && npm run build:tokens",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "test": "npm run validate"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "ajv": "^8.17.1",
+    "eslint": "^9.8.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "style-dictionary": "^4.3.3"
+  }
+}

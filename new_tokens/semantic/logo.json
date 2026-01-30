@@ -1,0 +1,8 @@
+{
+  "logo": {
+    "primary": "/assets/logos/primary/proactive-technology-logo-full-color-rgb.svg",
+    "mono": "/assets/logos/mono/proactive-technology-logo-one-color-rgb.svg",
+    "inverse": "/assets/logos/inverse/proactive-technology-logo-reverse-rgb.svg",
+    "inverted": "/assets/logos/inverted/proactive-technology-logo-inverted-rgb.svg"
+  }
+}
