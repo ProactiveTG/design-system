@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTO Standard Operating Procedure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       DESIGN TOKENS (from ProActive Design System)
+       ============================================= */
+
+    :root {
+      /* Brand Colors */
+      --color-brand-ghost: #ffffff;
+      --color-brand-subtle-slate: #f3f3f3;
+      --color-brand-onyx: #000000;
+      --color-brand-gold: #f9b62c;
+
+      /* Neutral Scale */
+      --color-neutral-white: #ffffff;
+      --color-neutral-lightest: #eeeeee;
+      --color-neutral-lighter: #cccccc;
+      --color-neutral-light: #aaaaaa;
+      --color-neutral-base: #666666;
+      --color-neutral-dark: #444444;
+      --color-neutral-darker: #222222;
+      --color-neutral-darkest: #000000;
+
+      /* Opacity - Gold */
+      --opacity-gold-5: rgba(249, 182, 44, 0.05);
+      --opacity-gold-10: rgba(249, 182, 44, 0.10);
+      --opacity-gold-15: rgba(249, 182, 44, 0.15);
+      --opacity-gold-20: rgba(249, 182, 44, 0.20);
+      --opacity-gold-30: rgba(249, 182, 44, 0.30);
+
+      /* Typography */
+      --font-family-primary: 'Space Grotesk', sans-serif;
+      --font-family-secondary: 'Roboto', sans-serif;
+
+      /* Font Sizes */
+      --font-size-12: 12px;
+      --font-size-14: 14px;
+      --font-size-16: 16px;
+      --font-size-18: 18px;
+      --font-size-20: 20px;
+      --font-size-24: 24px;
+      --font-size-32: 32px;
+      --font-size-40: 40px;
+      --font-size-48: 48px;
+
+      /* Font Weights */
+      --font-weight-light: 300;
+      --font-weight-normal: 400;
+      --font-weight-semi-bold: 500;
+      --font-weight-bold: 700;
+
+      /* Line Heights */
+      --line-height-xs: 1.2;
+      --line-height-sm: 1.3;
+      --line-height-md: 1.4;
+      --line-height-lg: 1.5;
+
+      /* Spacing */
+      --spacing-page-padding: 64px;
+      --spacing-page-padding-compact: 20px;
+      --spacing-section-large: 112px;
+      --spacing-section-medium: 80px;
+      --spacing-section-small: 48px;
+      --spacing-line: 48px;
+      --spacing-container-large: 1280px;
+      --spacing-container-medium: 1024px;
+
+      /* Shadows */
+      --shadow-xxsmall: 0px 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-xsmall: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.10);
+      --shadow-small: 0px 2px 4px -2px rgba(0, 0, 0, 0.06), 0px 4px 8px -2px rgba(0, 0, 0, 0.10);
+      --shadow-medium: 0px 4px 6px -2px rgba(0, 0, 0, 0.03), 0px 12px 16px -4px rgba(0, 0, 0, 0.08);
+      --shadow-large: 0px 8px 8px -4px rgba(0, 0, 0, 0.03), 0px 20px 24px -4px rgba(0, 0, 0, 0.08);
+
+      /* Stroke */
+      --stroke-border-width: 0.5px;
+    }
+
+    /* =============================================
+       BASE STYLES
+       ============================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family-secondary);
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-lg);
+      color: var(--color-brand-onyx);
+      background-color: var(--color-brand-subtle-slate);
+      min-height: 100vh;
+    }
+
+    /* =============================================
+       LAYOUT
+       ============================================= */
+
+    .container {
+      max-width: var(--spacing-container-medium);
+      margin: 0 auto;
+      padding: var(--spacing-page-padding-compact);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: var(--spacing-page-padding);
+      }
+    }
+
+    /* =============================================
+       HEADER
+       ============================================= */
+
+    .header {
+      background-color: var(--color-brand-onyx);
+      color: var(--color-brand-ghost);
+      padding: var(--spacing-section-small) 0;
+      margin-bottom: var(--spacing-section-small);
+    }
+
+    .header__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-40);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-xs);
+      margin-bottom: 16px;
+    }
+
+    .header__subtitle {
+      font-size: var(--font-size-18);
+      font-weight: var(--font-weight-light);
+      color: var(--color-neutral-lighter);
+      max-width: 600px;
+    }
+
+    .header__badge {
+      display: inline-block;
+      background-color: var(--color-brand-gold);
+      color: var(--color-brand-onyx);
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-12);
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      margin-bottom: 16px;
+    }
+
+    /* =============================================
+       PROGRESS TRACKER
+       ============================================= */
+
+    .progress-tracker {
+      background-color: var(--color-brand-ghost);
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-small);
+    }
+
+    .progress-tracker__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .progress-tracker__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-18);
+      font-weight: var(--font-weight-semi-bold);
+    }
+
+    .progress-tracker__count {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-14);
+      color: var(--color-neutral-base);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background-color: var(--color-neutral-lightest);
+      overflow: hidden;
+    }
+
+    .progress-bar__fill {
+      height: 100%;
+      background-color: var(--color-brand-gold);
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    /* =============================================
+       ACCORDION SECTIONS
+       ============================================= */
+
+    .accordion {
+      margin-bottom: 16px;
+    }
+
+    .accordion__item {
+      background-color: var(--color-brand-ghost);
+      margin-bottom: 8px;
+      box-shadow: var(--shadow-xsmall);
+      overflow: hidden;
+    }
+
+    .accordion__header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: background-color 0.2s ease;
+    }
+
+    .accordion__header:hover {
+      background-color: var(--opacity-gold-5);
+    }
+
+    .accordion__header--active {
+      background-color: var(--opacity-gold-10);
+      border-left: 4px solid var(--color-brand-gold);
+    }
+
+    .accordion__header-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .accordion__number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-neutral-lightest);
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-neutral-dark);
+      flex-shrink: 0;
+    }
+
+    .accordion__number--completed {
+      background-color: var(--color-brand-gold);
+      color: var(--color-brand-onyx);
+    }
+
+    .accordion__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-18);
+      font-weight: var(--font-weight-semi-bold);
+      color: var(--color-brand-onyx);
+    }
+
+    .accordion__icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .accordion__icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--color-neutral-base);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .accordion__item--open .accordion__icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion__item--open .accordion__content {
+      max-height: 2000px;
+    }
+
+    .accordion__body {
+      padding: 0 24px 24px 72px;
+    }
+
+    /* =============================================
+       CONTENT ELEMENTS
+       ============================================= */
+
+    .content-block {
+      margin-bottom: 24px;
+    }
+
+    .content-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-block__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-neutral-base);
+      margin-bottom: 12px;
+    }
+
+    .content-block p {
+      color: var(--color-neutral-dark);
+      margin-bottom: 12px;
+    }
+
+    .content-block ul {
+      list-style: none;
+      color: var(--color-neutral-dark);
+    }
+
+    .content-block li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    .content-block li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-brand-gold);
+    }
+
+    /* =============================================
+       CHECKLIST
+       ============================================= */
+
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: var(--stroke-border-width) solid var(--color-neutral-lightest);
+    }
+
+    .checklist__item:last-child {
+      border-bottom: none;
+    }
+
+    .checklist__checkbox {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .checklist__checkbox input {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .checklist__checkbox-custom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--color-neutral-lighter);
+      background-color: var(--color-brand-ghost);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .checklist__checkbox input:checked + .checklist__checkbox-custom {
+      background-color: var(--color-brand-gold);
+      border-color: var(--color-brand-gold);
+    }
+
+    .checklist__checkbox-custom svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--color-brand-ghost);
+      stroke-width: 3;
+      fill: none;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.2s ease;
+    }
+
+    .checklist__checkbox input:checked + .checklist__checkbox-custom svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .checklist__label {
+      flex: 1;
+      color: var(--color-neutral-dark);
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .checklist__item--checked .checklist__label {
+      color: var(--color-neutral-light);
+      text-decoration: line-through;
+    }
+
+    /* =============================================
+       INFO BOXES
+       ============================================= */
+
+    .info-box {
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--color-brand-gold);
+      background-color: var(--opacity-gold-5);
+    }
+
+    .info-box--important {
+      border-left-color: var(--color-brand-onyx);
+      background-color: var(--color-neutral-lightest);
+    }
+
+    .info-box__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 8px;
+      color: var(--color-brand-onyx);
+    }
+
+    .info-box__content {
+      font-size: var(--font-size-14);
+      color: var(--color-neutral-dark);
+    }
+
+    /* =============================================
+       TIMELINE
+       ============================================= */
+
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background-color: var(--color-neutral-lighter);
+    }
+
+    .timeline__item {
+      position: relative;
+      padding-bottom: 24px;
+    }
+
+    .timeline__item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline__marker {
+      position: absolute;
+      left: -32px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-brand-ghost);
+      border: 3px solid var(--color-brand-gold);
+    }
+
+    .timeline__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-16);
+      font-weight: var(--font-weight-semi-bold);
+      color: var(--color-brand-onyx);
+      margin-bottom: 4px;
+    }
+
+    .timeline__desc {
+      font-size: var(--font-size-14);
+      color: var(--color-neutral-base);
+    }
+
+    /* =============================================
+       TABLE
+       ============================================= */
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 16px 0;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--font-size-14);
+    }
+
+    .table th,
+    .table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: var(--stroke-border-width) solid var(--color-neutral-lighter);
+    }
+
+    .table th {
+      font-family: var(--font-family-primary);
+      font-weight: var(--font-weight-semi-bold);
+      background-color: var(--color-brand-onyx);
+      color: var(--color-brand-ghost);
+    }
+
+    .table td {
+      color: var(--color-neutral-dark);
+    }
+
+    .table tr:hover td {
+      background-color: var(--opacity-gold-5);
+    }
+
+    /* =============================================
+       BUTTONS
+       ============================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-semi-bold);
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn--primary {
+      background-color: var(--color-brand-gold);
+      color: var(--color-brand-onyx);
+    }
+
+    .btn--primary:hover {
+      background-color: #e5a628;
+    }
+
+    .btn--secondary {
+      background-color: var(--color-brand-onyx);
+      color: var(--color-brand-ghost);
+    }
+
+    .btn--secondary:hover {
+      background-color: var(--color-neutral-darker);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      color: var(--color-brand-onyx);
+      border: 2px solid var(--color-brand-onyx);
+    }
+
+    .btn--outline:hover {
+      background-color: var(--color-brand-onyx);
+      color: var(--color-brand-ghost);
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+
+    .footer {
+      background-color: var(--color-brand-onyx);
+      color: var(--color-neutral-lighter);
+      padding: var(--spacing-section-small) 0;
+      margin-top: var(--spacing-section-medium);
+    }
+
+    .footer__content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .footer__content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .footer__info p {
+      font-size: var(--font-size-14);
+      margin-bottom: 4px;
+    }
+
+    .footer__info strong {
+      color: var(--color-brand-ghost);
+    }
+
+    .footer__actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* =============================================
+       QUICK REFERENCE CARD
+       ============================================= */
+
+    .quick-ref {
+      background-color: var(--color-brand-ghost);
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-small);
+    }
+
+    .quick-ref__title {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-20);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quick-ref__title svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-brand-gold);
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .quick-ref__grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .quick-ref__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .quick-ref__item {
+      padding: 16px;
+      background-color: var(--color-brand-subtle-slate);
+    }
+
+    .quick-ref__label {
+      font-size: var(--font-size-12);
+      font-weight: var(--font-weight-semi-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-neutral-base);
+      margin-bottom: 4px;
+    }
+
+    .quick-ref__value {
+      font-family: var(--font-family-primary);
+      font-size: var(--font-size-24);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-brand-onyx);
+    }
+
+    .quick-ref__value--highlight {
+      color: var(--color-brand-gold);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <span class="header__badge">HR Policy</span>
+      <h1 class="header__title">Paid Time Off (PTO)<br>Standard Operating Procedure</h1>
+      <p class="header__subtitle">Everything you need to know about requesting, managing, and tracking your paid time off.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Progress Tracker -->
+    <div class="progress-tracker">
+      <div class="progress-tracker__header">
+        <span class="progress-tracker__title">Your Progress</span>
+        <span class="progress-tracker__count"><span id="completed-count">0</span> of <span id="total-count">0</span> items completed</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar__fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="quick-ref">
+      <h2 class="quick-ref__title">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Quick Reference
+      </h2>
+      <div class="quick-ref__grid">
+        <div class="quick-ref__item">
+          <div class="quick-ref__label">Annual PTO Days</div>
+          <div class="quick-ref__value">15-25 <span style="font-size: 14px; font-weight: 400;">days</span></div>
+        </div>
+        <div class="quick-ref__item">
+          <div class="quick-ref__label">Minimum Notice</div>
+          <div class="quick-ref__value quick-ref__value--highlight">2 Weeks</div>
+        </div>
+        <div class="quick-ref__item">
+          <div class="quick-ref__label">Max Carryover</div>
+          <div class="quick-ref__value">5 <span style="font-size: 14px; font-weight: 400;">days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion Sections -->
+    <div class="accordion" id="accordion">
+
+      <!-- Section 1: Overview -->
+      <div class="accordion__item" data-section="1">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">1</span>
+            <span class="accordion__title">PTO Policy Overview</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">Purpose</h3>
+              <p>This Standard Operating Procedure outlines the guidelines for requesting and managing Paid Time Off (PTO) to ensure fair and consistent application across all departments while maintaining operational efficiency.</p>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Scope</h3>
+              <p>This policy applies to all full-time and part-time employees who have completed their probationary period.</p>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box__title">Important Note</div>
+              <div class="info-box__content">PTO accrual begins on your first day of employment but can only be used after completing the 90-day probationary period.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the purpose and scope of this PTO policy</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I acknowledge that PTO can only be used after the probationary period</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Accrual Rates -->
+      <div class="accordion__item" data-section="2">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">2</span>
+            <span class="accordion__title">PTO Accrual Rates</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">Annual Allocation by Tenure</h3>
+              <div class="table-wrapper">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Years of Service</th>
+                      <th>Annual PTO Days</th>
+                      <th>Monthly Accrual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>0-2 years</td>
+                      <td>15 days</td>
+                      <td>1.25 days/month</td>
+                    </tr>
+                    <tr>
+                      <td>3-5 years</td>
+                      <td>20 days</td>
+                      <td>1.67 days/month</td>
+                    </tr>
+                    <tr>
+                      <td>6+ years</td>
+                      <td>25 days</td>
+                      <td>2.08 days/month</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="info-box info-box--important">
+              <div class="info-box__title">Carryover Policy</div>
+              <div class="info-box__content">A maximum of 5 unused PTO days may be carried over to the next calendar year. Any days exceeding this limit will be forfeited on December 31st. Plan your time off accordingly!</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand my PTO accrual rate based on my tenure</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I acknowledge the 5-day maximum carryover policy</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Request Process -->
+      <div class="accordion__item" data-section="3">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">3</span>
+            <span class="accordion__title">Request Process</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">Step-by-Step Process</h3>
+              <div class="timeline">
+                <div class="timeline__item">
+                  <div class="timeline__marker"></div>
+                  <div class="timeline__title">Step 1: Check Your Balance</div>
+                  <div class="timeline__desc">Log into the HR portal and verify your available PTO balance before submitting a request.</div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__marker"></div>
+                  <div class="timeline__title">Step 2: Submit Request</div>
+                  <div class="timeline__desc">Complete the PTO request form in the HR portal at least 2 weeks before your planned time off.</div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__marker"></div>
+                  <div class="timeline__title">Step 3: Manager Approval</div>
+                  <div class="timeline__desc">Your direct manager will review and approve/deny the request within 3 business days.</div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__marker"></div>
+                  <div class="timeline__title">Step 4: Confirmation</div>
+                  <div class="timeline__desc">You'll receive an email confirmation once your PTO is approved and reflected in the system.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box__title">Emergency PTO</div>
+              <div class="info-box__content">For unexpected emergencies, contact your manager directly and submit the formal request within 24 hours of returning to work.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Notice Requirements</h3>
+              <ul>
+                <li><strong>1-2 days off:</strong> Minimum 1 week notice</li>
+                <li><strong>3-5 days off:</strong> Minimum 2 weeks notice</li>
+                <li><strong>1+ week off:</strong> Minimum 4 weeks notice</li>
+                <li><strong>Holiday periods:</strong> Minimum 6 weeks notice</li>
+              </ul>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the 4-step PTO request process</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the notice requirements for different PTO durations</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I know how to handle emergency PTO situations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4: Blackout Periods -->
+      <div class="accordion__item" data-section="4">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">4</span>
+            <span class="accordion__title">Blackout Periods & Restrictions</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">Company-Wide Blackout Dates</h3>
+              <p>The following periods are designated as blackout dates when PTO requests may be limited or denied due to critical business needs:</p>
+              <ul>
+                <li><strong>Year-End Close:</strong> December 28 - January 3</li>
+                <li><strong>Quarterly Reporting:</strong> Last 3 business days of each quarter</li>
+                <li><strong>Annual Planning:</strong> First week of September</li>
+              </ul>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Department-Specific Restrictions</h3>
+              <p>Some departments may have additional blackout periods based on seasonal demands. Check with your manager for department-specific guidelines.</p>
+            </div>
+
+            <div class="info-box info-box--important">
+              <div class="info-box__title">Team Coverage Requirement</div>
+              <div class="info-box__content">A minimum of 50% team coverage must be maintained at all times. PTO requests may be denied if approval would result in inadequate coverage.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I am aware of company-wide blackout dates</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the 50% team coverage requirement</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5: Types of PTO -->
+      <div class="accordion__item" data-section="5">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">5</span>
+            <span class="accordion__title">Types of Paid Time Off</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">PTO Categories</h3>
+              <div class="table-wrapper">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Description</th>
+                      <th>Included in Balance?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Vacation</strong></td>
+                      <td>Personal time off for rest and recreation</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Sick Leave</strong></td>
+                      <td>Personal illness or medical appointments</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Personal Days</strong></td>
+                      <td>Personal matters requiring time away</td>
+                      <td>Yes</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Bereavement</strong></td>
+                      <td>Loss of immediate family member (3-5 days)</td>
+                      <td>No - Separate</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Jury Duty</strong></td>
+                      <td>Required civic duty service</td>
+                      <td>No - Separate</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box__title">Sick Leave Documentation</div>
+              <div class="info-box__content">For sick leave exceeding 3 consecutive days, a doctor's note may be required upon return. This documentation should be submitted to HR within 48 hours.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the different types of PTO available</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I know which types are included in my PTO balance and which are separate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6: Manager Responsibilities -->
+      <div class="accordion__item" data-section="6">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">6</span>
+            <span class="accordion__title">Manager Responsibilities</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">Approval Guidelines</h3>
+              <p>Managers are responsible for reviewing and responding to PTO requests in a timely and fair manner. Consider the following when reviewing requests:</p>
+              <ul>
+                <li>Team coverage and workload distribution</li>
+                <li>Project deadlines and deliverables</li>
+                <li>Previously approved time off for other team members</li>
+                <li>Employee's remaining PTO balance</li>
+                <li>Business-critical periods and blackout dates</li>
+              </ul>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Response Timeline</h3>
+              <p>Managers must respond to PTO requests within <strong>3 business days</strong>. If a request cannot be approved, provide a clear explanation and work with the employee to find an alternative.</p>
+            </div>
+
+            <div class="info-box info-box--important">
+              <div class="info-box__title">Fair Treatment</div>
+              <div class="info-box__content">Apply PTO approval criteria consistently across all team members. If conflicts arise between requests, use first-come-first-served or rotating priority based on previous approvals.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Acknowledgment Checklist</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I understand the manager's role in PTO approvals</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I know who to contact if my PTO request is not addressed within 3 days</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 7: Contact & Resources -->
+      <div class="accordion__item" data-section="7">
+        <button class="accordion__header" onclick="toggleAccordion(this)">
+          <div class="accordion__header-content">
+            <span class="accordion__number">7</span>
+            <span class="accordion__title">Contact & Resources</span>
+          </div>
+          <span class="accordion__icon">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </button>
+        <div class="accordion__content">
+          <div class="accordion__body">
+            <div class="content-block">
+              <h3 class="content-block__title">HR Contact Information</h3>
+              <ul>
+                <li><strong>HR Helpdesk:</strong> hr-support@company.com</li>
+                <li><strong>Phone:</strong> (555) 123-4567</li>
+                <li><strong>HR Portal:</strong> portal.company.com/hr</li>
+                <li><strong>Office Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</li>
+              </ul>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Helpful Resources</h3>
+              <ul>
+                <li>PTO Balance Calculator (HR Portal)</li>
+                <li>Holiday Calendar (Company Intranet)</li>
+                <li>Leave of Absence Policy Guide</li>
+                <li>Employee Handbook - Section 4.2</li>
+              </ul>
+            </div>
+
+            <div class="info-box">
+              <div class="info-box__title">Questions?</div>
+              <div class="info-box__content">If you have any questions about this policy or need clarification, please reach out to your HR Business Partner or submit a ticket through the HR Portal.</div>
+            </div>
+
+            <div class="content-block">
+              <h3 class="content-block__title">Final Acknowledgment</h3>
+              <ul class="checklist">
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I have read and understood the complete PTO Standard Operating Procedure</span>
+                </li>
+                <li class="checklist__item">
+                  <label class="checklist__checkbox">
+                    <input type="checkbox" onchange="updateProgress(this)">
+                    <span class="checklist__checkbox-custom">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </label>
+                  <span class="checklist__label">I agree to follow the procedures outlined in this document</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__info">
+          <p><strong>PTO Standard Operating Procedure</strong></p>
+          <p>Version 2.1 | Last Updated: January 2026</p>
+          <p>Human Resources Department</p>
+        </div>
+        <div class="footer__actions">
+          <button class="btn btn--primary" onclick="printSOP()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print SOP
+          </button>
+          <button class="btn btn--outline" onclick="resetProgress()">Reset Progress</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize progress tracking
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeProgress();
+
+      // Open first accordion by default
+      const firstAccordion = document.querySelector('.accordion__item');
+      if (firstAccordion) {
+        firstAccordion.classList.add('accordion__item--open');
+        firstAccordion.querySelector('.accordion__header').classList.add('accordion__header--active');
+      }
+
+      // Load saved progress from localStorage
+      loadSavedProgress();
+    });
+
+    function toggleAccordion(button) {
+      const item = button.closest('.accordion__item');
+      const isOpen = item.classList.contains('accordion__item--open');
+
+      // Close all items
+      document.querySelectorAll('.accordion__item').forEach(i => {
+        i.classList.remove('accordion__item--open');
+        i.querySelector('.accordion__header').classList.remove('accordion__header--active');
+      });
+
+      // Open clicked item if it was closed
+      if (!isOpen) {
+        item.classList.add('accordion__item--open');
+        button.classList.add('accordion__header--active');
+      }
+    }
+
+    function initializeProgress() {
+      const checkboxes = document.querySelectorAll('.checklist__checkbox input');
+      document.getElementById('total-count').textContent = checkboxes.length;
+      updateProgressBar();
+    }
+
+    function updateProgress(checkbox) {
+      const item = checkbox.closest('.checklist__item');
+      if (checkbox.checked) {
+        item.classList.add('checklist__item--checked');
+      } else {
+        item.classList.remove('checklist__item--checked');
+      }
+
+      updateProgressBar();
+      saveProgress();
+      updateSectionNumbers();
+    }
+
+    function updateProgressBar() {
+      const checkboxes = document.querySelectorAll('.checklist__checkbox input');
+      const checked = document.querySelectorAll('.checklist__checkbox input:checked');
+      const percentage = (checked.length / checkboxes.length) * 100;
+
+      document.getElementById('completed-count').textContent = checked.length;
+      document.getElementById('progress-fill').style.width = percentage + '%';
+    }
+
+    function updateSectionNumbers() {
+      document.querySelectorAll('.accordion__item').forEach(item => {
+        const checkboxes = item.querySelectorAll('.checklist__checkbox input');
+        const checked = item.querySelectorAll('.checklist__checkbox input:checked');
+        const numberEl = item.querySelector('.accordion__number');
+
+        if (checkboxes.length > 0 && checked.length === checkboxes.length) {
+          numberEl.classList.add('accordion__number--completed');
+          numberEl.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>';
+        } else {
+          numberEl.classList.remove('accordion__number--completed');
+          numberEl.textContent = item.dataset.section;
+        }
+      });
+    }
+
+    function saveProgress() {
+      const checkboxes = document.querySelectorAll('.checklist__checkbox input');
+      const progress = Array.from(checkboxes).map(cb => cb.checked);
+      localStorage.setItem('pto-sop-progress', JSON.stringify(progress));
+    }
+
+    function loadSavedProgress() {
+      const saved = localStorage.getItem('pto-sop-progress');
+      if (saved) {
+        const progress = JSON.parse(saved);
+        const checkboxes = document.querySelectorAll('.checklist__checkbox input');
+        checkboxes.forEach((cb, index) => {
+          if (progress[index]) {
+            cb.checked = true;
+            cb.closest('.checklist__item').classList.add('checklist__item--checked');
+          }
+        });
+        updateProgressBar();
+        updateSectionNumbers();
+      }
+    }
+
+    function resetProgress() {
+      if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+        localStorage.removeItem('pto-sop-progress');
+        document.querySelectorAll('.checklist__checkbox input').forEach(cb => {
+          cb.checked = false;
+          cb.closest('.checklist__item').classList.remove('checklist__item--checked');
+        });
+        document.querySelectorAll('.accordion__number').forEach((el, index) => {
+          el.classList.remove('accordion__number--completed');
+          el.textContent = index + 1;
+        });
+        updateProgressBar();
+      }
+    }
+
+    function printSOP() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
