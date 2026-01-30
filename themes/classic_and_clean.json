@@ -1,0 +1,19 @@
+{
+  "classic_and_clean": {
+    "text": {
+      "value": "{color.brand.onyx}"
+    },
+    "foreground": {
+      "value": "{color.brand.subtle_slate}"
+    },
+    "background": {
+      "value": "{color.white}"
+    },
+    "border": {
+      "value": "{color.brand.subtle_slate}"
+    },
+    "accent": {
+      "value": "{color.brand.gold}"
+    }
+  }
+}

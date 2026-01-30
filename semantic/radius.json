@@ -1,0 +1,13 @@
+{
+  "radius": {
+    "button": {
+      "value": "{radius.small}"
+    },
+    "card": {
+      "value": "{radius.medium}"
+    },
+    "input": {
+      "value": "{radius.small}"
+    }
+  }
+}
