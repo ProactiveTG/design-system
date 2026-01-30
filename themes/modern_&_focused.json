@@ -1,0 +1,19 @@
+{
+  "modern_&_focused": {
+    "text": {
+      "value": "{color.neutral.darkest}"
+    },
+    "foreground": {
+      "value": "{color.white}"
+    },
+    "background": {
+      "value": "{color.brand.subtle_slate}"
+    },
+    "border": {
+      "value": "{opacity.neutral_darkest.30}"
+    },
+    "accent": {
+      "value": "{color.brand.gold}"
+    }
+  }
+}

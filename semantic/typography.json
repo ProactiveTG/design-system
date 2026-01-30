@@ -1,0 +1,89 @@
+{
+  "font": {
+    "heading": {
+      "xl": {
+        "value": "{font.size.56}"
+      },
+      "lg": {
+        "value": "{font.size.48}"
+      },
+      "md": {
+        "value": "{font.size.40}"
+      },
+      "sm": {
+        "value": "{font.size.32}"
+      },
+      "xs": {
+        "value": "{font.size.24}"
+      },
+      "xxs": {
+        "value": "{font.size.20}"
+      },
+      "xxl": {
+        "value": "{font.size.72}"
+      },
+      "tiny": {
+        "value": "{font.size.14}"
+      }
+    },
+    "body": {
+      "lg": {
+        "value": "{font.size.20}"
+      },
+      "md": {
+        "value": "{font.size.18}"
+      },
+      "sm": {
+        "value": "{font.size.16}"
+      },
+      "xs": {
+        "value": "{font.size.14}"
+      },
+      "xxs": {
+        "value": "{font.size.12}"
+      }
+    },
+    "heading_small": {
+      "xl": {
+        "value": "{font.size.40}"
+      },
+      "lg": {
+        "value": "{font.size.36}"
+      },
+      "md": {
+        "value": "{font.size.32}"
+      },
+      "sm": {
+        "value": "{font.size.24}"
+      },
+      "xs": {
+        "value": "{font.size.20}"
+      },
+      "xxs": {
+        "value": "{font.size.18}"
+      }
+    },
+    "body_small": {
+      "lg": {
+        "value": "{font.size.18}"
+      },
+      "md": {
+        "value": "{font.size.16}"
+      },
+      "sm": {
+        "value": "{font.size.16}"
+      },
+      "xs": {
+        "value": "{font.size.14}"
+      },
+      "xxs": {
+        "value": "{font.size.12}"
+      }
+    },
+    "tagline": {
+      "base": {
+        "value": "{font.size.16}"
+      }
+    }
+  }
+}

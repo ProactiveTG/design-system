@@ -1,0 +1,19 @@
+{
+  "soft_&_neutral": {
+    "text": {
+      "value": "{color.neutral.dark}"
+    },
+    "foreground": {
+      "value": "{color.white}"
+    },
+    "background": {
+      "value": "{color.neutral.lightest}"
+    },
+    "border": {
+      "value": "{color.brand.subtle_slate}"
+    },
+    "accent": {
+      "value": "{color.brand.gold}"
+    }
+  }
+}

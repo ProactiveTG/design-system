@@ -1,0 +1,19 @@
+{
+  "bold_&_luxe": {
+    "text": {
+      "value": "{color.white}"
+    },
+    "foreground": {
+      "value": "{color.neutral.dark}"
+    },
+    "background": {
+      "value": "{color.neutral.darkest}"
+    },
+    "border": {
+      "value": "{color.brand.gold}"
+    },
+    "accent": {
+      "value": "{color.brand.gold}"
+    }
+  }
+}

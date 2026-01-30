@@ -1,0 +1,44 @@
+{
+  "color": {
+    "white": {
+      "value": "#ffffff"
+    },
+    "neutral": {
+      "lightest": {
+        "value": "#eeeeee"
+      },
+      "lighter": {
+        "value": "#cccccc"
+      },
+      "light": {
+        "value": "#aaaaaa"
+      },
+      "base": {
+        "value": "#666666"
+      },
+      "dark": {
+        "value": "#444444"
+      },
+      "darker": {
+        "value": "#222222"
+      },
+      "darkest": {
+        "value": "#000000"
+      }
+    },
+    "brand": {
+      "ghost": {
+        "value": "#ffffff"
+      },
+      "subtle_slate": {
+        "value": "#f3f3f3"
+      },
+      "onyx": {
+        "value": "#000000"
+      },
+      "gold": {
+        "value": "#f9b62c"
+      }
+    }
+  }
+}
