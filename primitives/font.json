@@ -1,67 +1,43 @@
 {
   "font": {
-    "size": {
-      "12": {
-        "value": 12
-      },
-      "14": {
-        "value": 14
-      },
-      "16": {
-        "value": 16
-      },
-      "18": {
-        "value": 18
-      },
-      "20": {
-        "value": 20
-      },
-      "24": {
-        "value": 24
-      },
-      "32": {
-        "value": 32
-      },
-      "36": {
-        "value": 36
-      },
-      "40": {
-        "value": 40
-      },
-      "48": {
-        "value": 48
-      },
-      "56": {
-        "value": 56
-      },
-      "72": {
-        "value": 72
-      }
-    },
     "family": {
       "primary": {
         "value": "Space Grotesk, sans-serif"
       },
       "secondary": {
-        "value": "Roboto, sans-serif"
+        "value": "Space Grotesk, sans-serif"
       }
     },
     "weight": {
       "light": {
         "value": 300
       },
-      "normal": {
+      "regular": {
         "value": 400
       },
-      "semi_bold": {
+      "medium": {
         "value": 500
+      },
+      "semi_bold": {
+        "value": 600
       },
       "bold": {
         "value": 700
-      },
-      "extra_bold": {
-        "value": 700
       }
+    },
+    "size": {
+      "12": { "value": 12 },
+      "14": { "value": 14 },
+      "16": { "value": 16 },
+      "18": { "value": 18 },
+      "20": { "value": 20 },
+      "24": { "value": 24 },
+      "32": { "value": 32 },
+      "36": { "value": 36 },
+      "40": { "value": 40 },
+      "48": { "value": 48 },
+      "56": { "value": 56 },
+      "72": { "value": 72 }
     }
   }
 }
