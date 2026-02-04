@@ -1,89 +1,100 @@
 {
-  "font": {
+  "typography": {
+    "fontFamily": {
+      "primary": "{font.family.primary}",
+      "secondary": "{font.family.secondary}"
+    },
+
+    "stats": {
+      "size": "{font.size.72}",
+      "weight": "{font.weight.regular}",
+      "lineHeight": 1.2,
+      "family": "{font.family.primary}"
+    },
+
     "heading": {
-      "xl": {
-        "value": "{font.size.56}"
+      "h1": {
+        "size": "{font.size.56}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.2,
+        "family": "{font.family.primary}"
       },
-      "lg": {
-        "value": "{font.size.48}"
+      "h2": {
+        "size": "{font.size.48}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.2,
+        "family": "{font.family.primary}"
       },
-      "md": {
-        "value": "{font.size.40}"
+      "h3": {
+        "size": "{font.size.40}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.2,
+        "family": "{font.family.primary}"
       },
-      "sm": {
-        "value": "{font.size.32}"
+      "h4": {
+        "size": "{font.size.32}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.3,
+        "family": "{font.family.primary}"
       },
-      "xs": {
-        "value": "{font.size.24}"
+      "h5": {
+        "size": "{font.size.24}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.4,
+        "family": "{font.family.primary}"
       },
-      "xxs": {
-        "value": "{font.size.20}"
+      "h6": {
+        "size": "{font.size.14}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.4,
+        "family": "{font.family.primary}",
+        "transform": "uppercase"
+      }
+    },
+
+    "body": {
+      "large": {
+        "size": "{font.size.20}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "family": "{font.family.primary}"
       },
-      "xxl": {
-        "value": "{font.size.72}"
+      "medium": {
+        "size": "{font.size.18}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "family": "{font.family.primary}"
+      },
+      "regular": {
+        "size": "{font.size.16}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "family": "{font.family.primary}"
+      },
+      "small": {
+        "size": "{font.size.14}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "family": "{font.family.primary}"
       },
       "tiny": {
-        "value": "{font.size.14}"
+        "size": "{font.size.12}",
+        "weight": "{font.weight.regular}",
+        "lineHeight": 1.5,
+        "family": "{font.family.primary}"
       }
     },
-    "body": {
-      "lg": {
-        "value": "{font.size.20}"
-      },
-      "md": {
-        "value": "{font.size.18}"
-      },
-      "sm": {
-        "value": "{font.size.16}"
-      },
-      "xs": {
-        "value": "{font.size.14}"
-      },
-      "xxs": {
-        "value": "{font.size.12}"
-      }
-    },
-    "heading_small": {
-      "xl": {
-        "value": "{font.size.40}"
-      },
-      "lg": {
-        "value": "{font.size.36}"
-      },
-      "md": {
-        "value": "{font.size.32}"
-      },
-      "sm": {
-        "value": "{font.size.24}"
-      },
-      "xs": {
-        "value": "{font.size.20}"
-      },
-      "xxs": {
-        "value": "{font.size.18}"
-      }
-    },
-    "body_small": {
-      "lg": {
-        "value": "{font.size.18}"
-      },
-      "md": {
-        "value": "{font.size.16}"
-      },
-      "sm": {
-        "value": "{font.size.16}"
-      },
-      "xs": {
-        "value": "{font.size.14}"
-      },
-      "xxs": {
-        "value": "{font.size.12}"
-      }
-    },
+
     "tagline": {
-      "base": {
-        "value": "{font.size.16}"
-      }
+      "size": "{font.size.16}",
+      "weight": "{font.weight.regular}",
+      "lineHeight": 1.5,
+      "family": "{font.family.secondary}"
+    },
+
+    "link": {
+      "weight": "{font.weight.regular}",
+      "decoration": "underline"
     }
   }
 }
